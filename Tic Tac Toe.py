@@ -2,7 +2,10 @@ import tkinter as tk
 from tkinter import ttk
 from pygame import mixer
 import pygame
-import os
+from sys import argv
+from os.path import dirname
+
+
 GREY = "#262626"
 HIGHLIGHTED_GREY = "#3b3f40"
 
@@ -13,7 +16,7 @@ GREEN = "#02f713"
 RED = "#f70b02"
 
 pygame.mixer.init()
-mixer.music.load(f'{os.path.dirname(__file__)}/Sounds/Tic.mp3')
+mixer.music.load(f'{dirname(argv[0])}/Sounds/Tic.mp3')
 mixer.music.play(-1)
 
 
